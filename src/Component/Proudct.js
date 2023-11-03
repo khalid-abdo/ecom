@@ -9,11 +9,13 @@ function Proudct(props) {
                 <div className="card-body">
                     <h5 className="card-title">{proudct.title}</h5>
                     <p className="card-text">{proudct.description}</p>
-                    <p>{proudct.price } $</p>
+                    <p>{proudct.price } $$</p>
                     <a href="#" className="btn btn-primary">Details</a>
                    
                 </div>
             </div>
+
+            
         </>
     )
 }
