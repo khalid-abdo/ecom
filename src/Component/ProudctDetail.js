@@ -7,14 +7,18 @@ function ProudctDetail() {
     const Params = useParams();
     const api_url = 'https://fakestoreapi.com/products';
     const [proudct, setproudc] = useState({})
+    
     useEffect(() => {
         fetch(`${api_url}/${Params.ProudctID}`)
             .then((res) => res.json())
             .then((Proudct) => setproudc(Proudct))
     }, [])
+   
+    
     return (
         <div className="non">
             <Proudct proudct={proudct} ShowButton={false} />
+           
         </div>
     )
 }
