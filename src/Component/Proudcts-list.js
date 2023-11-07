@@ -10,7 +10,7 @@ function ProudctsList() {
     useEffect(() => {
         fetch(api_url)
             .then((res) => res.json())
-            .then((data)=>setproudcts(data))
+            .then((data) => setproudcts(data))
     }, [])
     //  قوس الاراي الفاضي دا علشان ينفذ الكود مره واحده بس وبلاضو علشان ميعملش ريكوست كتير هو واحد بس وبرضو الريكويست بيتكتب داخل الهووكاو يوز ايفكت
     return (
@@ -22,15 +22,15 @@ function ProudctsList() {
                 <div className="row">
                     {proudcts.map((proudct) => {
                         //  انا بعمل الماب هلشان استلم الداتا باسم بروديكت  وتبقي بنفس الشكل اللي تحت دا 
-                        return(
-                        <div className="col-3 mt-3" key={proudct.id}>
-                                <Proudct proudct={proudct} />
+                        return (
+                            <div className="col-3 mt-3" key={proudct.id}>
+                                <Proudct proudct={proudct} ShowButton={true } />
                                 {/* الكود اللي فوق معناه ان كل الكومبونانت اللي اسمها برودكت اديها البرودكت بتاعك كانه بروبس */}
                             </div>
-                            )
+                        )
                     })}
-                   
-                   
+
+
                 </div>
             </div>
         </>
